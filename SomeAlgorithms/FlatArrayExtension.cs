@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Linq;
+
 
 namespace SomeAlgorithms
 {
     /// <summary>
     /// extension for array that allows flatten an array
     /// </summary>
-    public static class FlatArrayExtensionRecursive 
+    public static class FlatArrayExtension 
     {
+        /// <summary>
+        /// Concat two 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         private static T[] Concat<T>(this T[] a, T[] b)
         {
             T[] result = new T[a.Length + b.Length];
@@ -37,19 +44,22 @@ namespace SomeAlgorithms
                 if (array_i_type == typeof(object[]))
                 {
                     return GetFlatArrayRecursive((((object[])array)[i]), 0).
-                            Concat(GetFlatArrayRecursive(array, i + 1)).
-                                                     ToArray();
+                            Concat(GetFlatArrayRecursive(array, i + 1));
 
                 }
                 else
                 {
                     return (new[] { (((object[])array)[i]) }).
-                        Concat(GetFlatArrayRecursive(array, i + 1)).
-                        ToArray();
+                        Concat(GetFlatArrayRecursive(array, i + 1));
                 }
              }
         }
 
+        /// <summary>
+        /// extension method that allows flatten an array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         static public object[] GetFlatArray(this object array)
         {
             return GetFlatArrayRecursive(array, 0);
