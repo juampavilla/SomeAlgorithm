@@ -18,15 +18,15 @@ class FlatArrayExtension
   ```Console.WriteLine("Input 1: [[1,2,[3]],4]"); 
   object[] array1 = new object[] { new object[] { 1, 2, new object[] { 3 } }, new object[] { 4 } };  
   var flatArray1 = array1.GetFlatArray();  
-  WriteArray(flatArray1, "Flat 1");
+  WriteArray(flatArray1, "Flat 1");```
   
-  output:
-  Input 1: [[1,2,[3]],4]
-  Flat 1 array: [  1 , 2 , 3 , 4  ]
+output:
+Input 1: [[1,2,[3]],4]
+Flat 1 array: [  1 , 2 , 3 , 4  ]
 
 # XUnit Test
 
-```` public class FlatArrayUnitTest
+``` public class FlatArrayUnitTest
     {
         /// <summary>
         /// input: [[1,2,[3]],4]
@@ -52,9 +52,9 @@ class FlatArrayExtension
         }
 
         
-    }
+    } 
 
-
+```
 
 # Run tests
 In the Path:
@@ -64,6 +64,9 @@ SomeAlgorithms\XUnitTestSomeAlgorithms> dotnet test
 Starting test execution, please wait...
 
 Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
+
 Test Run Successful.
+
 Test execution time: 1.3827 Seconds
+
 
