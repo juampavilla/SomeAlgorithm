@@ -15,7 +15,7 @@ class FlatArrayExtension
 
 * e.g. [[1,2,[3]],4] -> [1,2,3,4]. *
             
-  Console.WriteLine("Input 1: [[1,2,[3]],4]");  
+  ```Console.WriteLine("Input 1: [[1,2,[3]],4]");  
   
   object[] array1 = new object[] { new object[] { 1, 2, new object[] { 3 } }, new object[] { 4 } };
   
@@ -27,7 +27,7 @@ class FlatArrayExtension
   
   Input 1: [[1,2,[3]],4]
   
-  Flat 1 array: [  1 , 2 , 3 , 4  ]
+  Flat 1 array: [  1 , 2 , 3 , 4  ]```
 
 # XUnit Test
 In the Path:
